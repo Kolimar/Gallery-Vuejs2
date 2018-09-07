@@ -1,0 +1,40 @@
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+}
+.columns .column {
+ flex:none;
+  box-sizing: border-box;
+  background: #d7d5e042;
+  color: #171e42;
+  padding: 10px;
+}
+body {
+	min-width:!important 800px;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  margin-left: 500px;
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid #fed;
+  border-color: #fed transparent #fed transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

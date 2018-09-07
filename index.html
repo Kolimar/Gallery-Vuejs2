@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link type="text/css" rel="stylesheet" href="css/bulma.css"/>
+	<link type="text/css" rel="stylesheet" href="css/animate.css"/>
+</head>
+<body>
+	 <div id="app">
+	 	<hr>
+	 	<center>
+	 		<h1>Galería Kiu System</h1>
+	 	</center>	
+	 	<hr>
+		<div class="columns" style="margin-left: 80px;">
+	 	  <center><div class="lds-dual-ring" v-if="!photos"></div></center>
+		  <div class="column is-narrow animated fadeIn"  v-for="elem in photos">
+		  	<img :src='elem.thumbnailUrl' v-on:click="selectphoto(elem)">
+		  </div>
+		</div>
+		<modal></modal>
+	</div>
+	<template id="modaltemp">
+		<div class="modal is-active animated fadeIn" v-show="display" @close="display = false">
+		  <div class="modal-background"></div>
+		  <div class="modal-content">
+		  	<p class="image is-4by3">
+		      <img :src="imageURL" alt="">
+		    </p>
+		    <p style="color:white">{{title}}</p> 
+		  </div>
+		  <button class="modal-close is-large" aria-label="close" @click="display = false"></button>
+		</div>
+	</template>
+	<script src="js/vue.js"></script>
+	<script src="js/axios.js"></script>
+	<script src="app/config.js"></script>
+	<script src="app/bus.js"></script>
+	<script src="app/modal.js"></script>
+	<script src="app/main.js"></script>
+</body>
+</html>
