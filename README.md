@@ -1,8 +1,6 @@
-Galeria test kiu system.
+Galeria dev test kiu system. 1hs.
 
-Basta con hacer doble click sobre index para abrir la app.
-
-Hay varios estilos inline que no separé porque no se evalúa diseño.
+Basta con hacer doble click sobre index.html para abrir la app.
 
 Librerías utilizadas:
 Vue.js v2.5.17
